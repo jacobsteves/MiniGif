@@ -3,7 +3,7 @@
 //  MiniGif
 //
 //  Created by Jacob Steves on 04/02/18.
-//  Copyright © 2016 Jacob Steves. All rights reserved.
+//  Copyright © 2018 Jacob Steves. All rights reserved.
 //
 
 import Cocoa
