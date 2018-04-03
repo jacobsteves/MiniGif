@@ -407,7 +407,7 @@
             <point key="canvasLocation" x="135" y="168"/>
         </menu>
         <window title="MiniGif" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="581"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -685,7 +685,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="UZ4-JS-mwj" secondAttribute="trailing" constant="20" id="x8j-Ws-Hqo"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="90" y="572.5"/>
+            <point key="canvasLocation" x="92" y="598"/>
         </window>
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="QMa-hy-zec">
             <windowStyleMask key="styleMask" titled="YES"/>

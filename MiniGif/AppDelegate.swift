@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         item = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
         item?.image = NSImage(named: "MiniGifIcon");
-
+        
         let hasShownAboutWindowForFirstLaunchDefaultsKey =
             "MiniGifHasShownAboutWindowForFirstLaunch"
 
