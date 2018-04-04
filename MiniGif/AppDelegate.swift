@@ -11,14 +11,22 @@ import Cocoa
 @NSApplicationMain
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
-    var item : NSStatusItem? = nil
+    var statusItem : NSStatusItem? = nil
+//    let statusItem = NSStatusBar.system().statusItem(withLength:NSStatusItem.NSSquareStatusItemLength)
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var resizer: Resizer!
     @IBOutlet weak var about: About!
 
+    @objc func printQuote(_ sender: Any?) {
+        let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
+        let quoteAuthor = "Mark Twain"
+        
+        print("\(quoteText) — \(quoteAuthor)")
+    }
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
-        item = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-        item?.image = NSImage(named: "MiniGifIcon");
+        statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+        statusItem?.image = NSImage(named: "MiniGifIcon");
         
         let hasShownAboutWindowForFirstLaunchDefaultsKey =
             "MiniGifHasShownAboutWindowForFirstLaunch"
@@ -31,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         }
 
         window.delegate = self
+        
+        constructMenu()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -55,5 +65,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     func windowWillClose(_ notification: Notification) {
         NSApp.terminate(nil)
+    }
+    
+     @objc func showResizerWindow(_ sender: Any?) {
+        print("Test")
+        resizer.resizerWindow.setIsVisible(!resizer.resizerWindow.isVisible)
+    }
+    
+    func constructMenu() {
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Resize", action: #selector(AppDelegate.showResizerWindow(_:)), keyEquivalent: "R"))
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        statusItem?.menu = menu
     }
 }
