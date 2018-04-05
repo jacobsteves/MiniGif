@@ -69,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     
      @objc func showResizerWindow(_ sender: Any?) {
         print("Test")
-        resizer.resizerWindow.setIsVisible(!resizer.resizerWindow.isVisible)
+        resizer.resizerWindow.setIsVisible(true)
     }
     
     func constructMenu() {
