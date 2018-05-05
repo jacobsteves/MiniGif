@@ -12,17 +12,9 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     var statusItem : NSStatusItem? = nil
-//    let statusItem = NSStatusBar.system().statusItem(withLength:NSStatusItem.NSSquareStatusItemLength)
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var resizer: Resizer!
     @IBOutlet weak var about: About!
-
-    @objc func printQuote(_ sender: Any?) {
-        let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
-        let quoteAuthor = "Mark Twain"
-        
-        print("\(quoteText) — \(quoteAuthor)")
-    }
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
@@ -39,7 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         }
 
         window.delegate = self
-        
         constructMenu()
     }
 
@@ -62,14 +53,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
         return false
     }
-
-    func windowWillClose(_ notification: Notification) {
-        NSApp.terminate(nil)
+    
+    @objc func showResizerWindow(_ sender: Any?) {
+        resizer.resizerWindow.setIsVisible(true)
     }
     
-     @objc func showResizerWindow(_ sender: Any?) {
-        print("Test")
-        resizer.resizerWindow.setIsVisible(true)
+    @objc func hideResizerWindow() {
+        resizer.resizerWindow.setIsVisible(false)
     }
     
     func constructMenu() {
