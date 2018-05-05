@@ -739,7 +739,7 @@ DQ
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="sbX-gj-45R">
                         <rect key="frame" x="48" y="287" width="37" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="v0.9" id="wMN-sC-65x">
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="v1.0" id="wMN-sC-65x">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -765,7 +765,7 @@ DQ
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="345" y="1226.5"/>
+            <point key="canvasLocation" x="200" y="1214"/>
         </window>
     </objects>
 </document>
